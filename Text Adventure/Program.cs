@@ -2,49 +2,175 @@
 {
     internal class Program
     {
+        static void WriteLetterByLetter(string text)
+        {
+            for (int i = 0; i < text.Length; ++i)
+            {
+                Console.Write(text[i]);
+                Thread.Sleep(60);
+            }
+        
+        }
+        //
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hic Sunt Leones.");
+            WriteLetterByLetter("Hello.");
+            Console.WriteLine(); // Blank Line
 
             string input = Console.ReadLine();
-
-            if (input == "HIC SUNT LEONES!")
+            if (input == "hello")
             {
-                Console.WriteLine("Break The Chains.");
+                Thread.Sleep(900);
+                WriteLetterByLetter("The Trial Shall Begin Shortly.");
+                Console.WriteLine(); // Blank Line
             }
 
-            else if (input == "Hic Sunt Leones.")
+            Thread.Sleep(1500);
+            Console.WriteLine("press spacebar to continue");
+            Console.WriteLine(); // Blank Line
+
+            ConsoleKeyInfo input2 = Console.ReadKey();
+            if (input2.KeyChar == ' ')
             {
-                Console.WriteLine("Welcome H.");
+                Thread.Sleep(900);
+                WriteLetterByLetter(" the room begins to darken, nonexistent lights seeming to dim");
+                Console.WriteLine(); // Blank Line
 
-                    Console.WriteLine("further instruction?"); 
+                Thread.Sleep(6500);
+                WriteLetterByLetter(" a crashing sound disturbs the matching silence; though it's a muffled sound, as if there's a wall of earth between you and the sound");
+                Console.WriteLine(); // Blank Line
 
-                string input3 = Console.ReadLine();
-                if (input3 == "Continue");
+                Thread.Sleep(6500);
+                WriteLetterByLetter(" a soft ring pitches out as a hidden overhead speaker turns on");
+                Console.Beep(1700, 995);
+                Console.WriteLine(); // Blank Line
+
+                Thread.Sleep(6500);
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                WriteLetterByLetter(" 'We Shall Begin With Small Game, A Warm-Up If You Will.'");
+                Console.WriteLine(); // Blank Line
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.White;
+                Thread.Sleep(6500); //Delay between text lines. MAY NEED EDITING
+                WriteLetterByLetter(" the voice was serious and hardy, seeming to anticipate their own words");
+                Console.WriteLine(); // Blank Line
+
+                Thread.Sleep(6500); //Delay between text lines. MAY NEED EDITING
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                WriteLetterByLetter(" 'Each environment will have a Fandril released into their depths.'");
+                Console.WriteLine(); // Blank Line
+
+                Thread.Sleep(7000);
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.White;
+                WriteLetterByLetter(" this voice was more down to earth. like they'd be bored if this 'event' wasn't so important, which it is.");
+                Console.WriteLine(); // Blank Line
+
+                Thread.Sleep(7000);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Black;
+                WriteLetterByLetter(" Suddenly, the wall in front of you began to open. Not like a door, but like a sliding panel; sinking down into the ground. Disturbingly seemless.");
+                Console.WriteLine(); // Blank Line
+
+                Thread.Sleep(7000);
+                WriteLetterByLetter(" Once the wall had completely melded into the floor the same tone rang out that, which had marked the beginning of an announcement. Now marking the end of the announcement.");
+                Thread.Sleep(900);
+                Console.Beep(1700, 995);
+                Console.WriteLine(); // Blank Line
+
+            }
+
+            Thread.Sleep(8000);
+            WriteLetterByLetter(" The sun shines through the opening, blinding and leaving no place for reclusion.");
+            Console.WriteLine(); // Blank Line
+
+            Thread.Sleep(7000);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            WriteLetterByLetter(" 'Leave Your room? - Cling to your limited familiarity?'");
+            Console.WriteLine(); // Blank Line
+
+            Thread.Sleep(4000);
+            Console.ForegroundColor = ConsoleColor.White;
+            WriteLetterByLetter(" were the words that suddenly burned into the floor in front of your feet, barely visible in the blinding light.");
+            Console.WriteLine(); // Blank Line
+
+            Thread.Sleep(7000);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine(" LEAVE? or STAY?"); //FIRST QUESTION CHIOICE
+            Console.WriteLine(); // Blank Line
+
+            string input3 = Console.ReadLine();
+            if (input3 == "leave")
+            {
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(4500);
+                Console.ForegroundColor = ConsoleColor.White;
+                WriteLetterByLetter(" Your eyes begin to adjust to the light as you step over the threshold");
+                Thread.Sleep(7000);
+                WriteLetterByLetter(" You've stepped into a forest.");
+            }
+
+           else if (input3 == "stay")
+            {
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(3000);
+                Console.ForegroundColor = ConsoleColor.White;
+                WriteLetterByLetter(" Your cowardice overcomes you as you press your back to the wall at the sight of the invading light and the emblazoned" +
+                    " words upon the floor");
+                Thread.Sleep(7000);
+                WriteLetterByLetter(" A strange yet soft hiss begins to fill your lonesome corner of pity, coming from the wall itself.");
+                Thread.Sleep(7000);
+                WriteLetterByLetter(" It's not the whispers of a snake, a distant memory knows the difference, but the breathing of gas.");
+                Thread.Sleep(7000);
+                WriteLetterByLetter(" As you begin to breath in the gas you expect a strange smell, but nothing happens..");
+                Console.WriteLine(); // Blank Line
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Thread.Sleep(8500);
+                Console.WriteLine(" LEAVE? or STAY?");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                string input4 = Console.ReadLine();
+                if (input4 == "leave")
                 {
-                    Console.WriteLine(); // HERE*
+                    Console.WriteLine(); // Blank Line
+                    Thread.Sleep(4500);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    WriteLetterByLetter(" Your eyes begin to adjust to the light as you step over the threshold");
+                    Thread.Sleep(4500);    //EDIT THIS: it needs to match the previous scenes panic
+                    WriteLetterByLetter(" You've stepped into a forest.");
                 }
 
+                else if (input4 == "stay")
+                {
+                    Console.WriteLine(); // Blank Line
+                    Thread.Sleep(7000);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    WriteLetterByLetter(" Suddenly a burning sensation begins to creep up your throat from deep in your chest, like a stone is steaming inside your esophagus. You cough and try to dispel the feeling but as the burning sensation gets closer to your mouth you can feel it getting warmer.");
+                    Thread.Sleep(9000);
+                    WriteLetterByLetter(" And warmer..");
+                    Thread.Sleep(7000);
+                    WriteLetterByLetter(" And warmer..");
+                    Thread.Sleep(7000);
+                    WriteLetterByLetter(" And warmer until you feel flame dripping along your tongue");
+                    Thread.Sleep(7000);
+                    Console.WriteLine(); // Blank Line
+                    WriteLetterByLetter(" You double over as you feel your throat becoming ash and your teeth being blackened, the escaping flames staining the floor in front of your face with scorch.");
+                    Console.WriteLine(); // Blank Line
+                    Thread.Sleep(9000);
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine(" Expiration Reached.");
+
+                }
 
             }
 
-            else
 
-            {
-                Console.WriteLine("Say Again?");
-            }
-            string input2 = Console.ReadLine();
-
-            if (input2 =="HIC SUNT LEONES!")
-            {
-                Console.WriteLine("Close Enough.");
-            }
-
-            else
-            {
-                Console.WriteLine("Excute This One.");
-            }
-
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(); // Blank Line
+            WriteLetterByLetter("        Press space bar to exit.");
+            Console.ReadKey();
         }
     }
 }
