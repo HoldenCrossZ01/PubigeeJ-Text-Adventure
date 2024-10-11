@@ -126,6 +126,8 @@
                 WriteLetterByLetter(" Your eyes begin to adjust to the light as you step over the threshold");
                 Thread.Sleep(3000);
                 WriteLetterByLetter(" You've stepped into a forest.");
+
+                bool outSideCaveRoom = true;
             }
 
            else if (input3 == "stay")
@@ -157,9 +159,12 @@
                     Console.WriteLine(); // Blank Line
                     Thread.Sleep(3000);
                     Console.ForegroundColor = ConsoleColor.White;
-                    WriteLetterByLetter(" Your eyes begin to adjust to the light as you step over the threshold");
+                    WriteLetterByLetter(" You panic at the sound of the gas and rush out through the opening.");
                     Thread.Sleep(3000);    //EDIT THIS: it needs to match the previous scenes panic
-                    WriteLetterByLetter(" You've stepped into a forest.");
+                    WriteLetterByLetter(" After forcing yourself to cough and expel the gas you begin to take in your background.");
+                    Thread.Sleep(3000);    //EDIT THIS: it needs to match the previous scenes panic
+                    WriteLetterByLetter(" Noting how the gas hadn't tasted nor smelt any different from air but you could've sworn you felt a few wisps of flame exit your mouth with the fumes.");
+                    bool outsideCaveRoom = true;
                 }
 
                 else if (input4 == "stay")
@@ -184,6 +189,12 @@
                     Console.WriteLine(" Expiration Reached.");
 
                 }
+
+                if (bool.outsideCaveRoom=true)
+                {
+
+                }
+
 
             }
 
