@@ -1,10 +1,17 @@
 ﻿namespace Text_Adventure
 {
+
     internal class Program
     {
 
+      
+
+       
+
+
         static void NormalReaction()
         {
+
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Thread.Sleep(300);
@@ -13,14 +20,6 @@
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(); // Blank Line
             Console.WriteLine(); // Blank Line
-        }
-
-        private enum Item
-        {
-            stick,
-            rock,
-            pinecone,
-            nothing
         }
 
         
@@ -45,17 +44,29 @@
         }
 
         private static bool hasExpired = false;
-        private static bool isOutside = false;  
+        private static bool isOutside = false;
 
         static void Main(string[] args)
         {
+
+            int myBirthMoment = 10162006;
+            Console.WriteLine(myBirthMoment);
+            float myFavoriteNumber = (int)myBirthMoment;
+            Console.WriteLine(myFavoriteNumber);
+            Console.WriteLine(myBirthMoment - myFavoriteNumber);
+            Console.WriteLine(myBirthMoment + myFavoriteNumber);
+            Console.WriteLine(myBirthMoment * myFavoriteNumber);
+
             WriteLetterByLetter("Hello.");
+            Console.WriteLine(); // Blank Line
             Console.WriteLine(); // Blank Line
 
 
             string input = Console.ReadLine();
             if (input == "hello")
             {
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
                 Thread.Sleep(900);
                 WriteLetterByLetter("The Trial Shall Begin Shortly.");
                 Console.WriteLine(); // Blank Line
@@ -282,29 +293,41 @@
                     Console.WriteLine(); // Blank Line
 
                     string input5= Console.ReadLine();
+                    ItemStats item = default;
+
                     if (input5 == "nothing") 
                     {
                         NormalReaction();
-                        Item item = Item.nothing;
                     }
 
                     else if (input5 == "rock")
                     {
                         NormalReaction();
-                        Item item = Item.rock;
+                        item = ItemStats.rock;
                     }
 
                     else if (input5 == "pinecone") 
                     {
                         NormalReaction();
-                        Item item = Item.pinecone;
+                        item = ItemStats.pinecone;
                     }
 
                     else if (input5 == "stick")
                     {
                         NormalReaction();
-                        Item item = Item.stick;
+                        item = ItemStats.stick;
                     }
+
+                    Console.WriteLine(item.itemType);
+
+
+
+
+
+
+
+
+
 
 
 
