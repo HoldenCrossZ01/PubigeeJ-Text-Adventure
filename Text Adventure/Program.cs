@@ -49,13 +49,13 @@
         static void Main(string[] args)
         {
 
-            int myBirthMoment = 10162006;
-            Console.WriteLine(myBirthMoment);
-            float myFavoriteNumber = (int)myBirthMoment;
-            Console.WriteLine(myFavoriteNumber);
-            Console.WriteLine(myBirthMoment - myFavoriteNumber);
-            Console.WriteLine(myBirthMoment + myFavoriteNumber);
-            Console.WriteLine(myBirthMoment * myFavoriteNumber);
+            //int myBirthMoment = 10162006;
+            //Console.WriteLine(myBirthMoment);
+            //float myFavoriteNumber = (int)myBirthMoment;
+            //Console.WriteLine(myFavoriteNumber);
+            //Console.WriteLine(myBirthMoment - myFavoriteNumber);
+            //Console.WriteLine(myBirthMoment + myFavoriteNumber);
+            //Console.WriteLine(myBirthMoment * myFavoriteNumber);
 
             WriteLetterByLetter("Hello.");
             Console.WriteLine(); // Blank Line
@@ -75,7 +75,7 @@
 
             Thread.Sleep(1500);
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("press spacebar to continue");
+            Console.WriteLine("press spacebar to continue. (use lowercase btw");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(); // Blank Line
             Console.WriteLine(); // Blank Line
@@ -174,7 +174,7 @@
                 Thread.Sleep(900);
                 WriteLetterByLetter(" With a frown you ignore it and look to what lies ahead.");
 
-                bool isOutside = true;
+                isOutside = true;
             }
 
            else if (input3 == "stay")
@@ -211,7 +211,7 @@
                     WriteLetterByLetter(" After forcing yourself to cough and expel the gas you begin to take in your background.");
                     Thread.Sleep(3000);    //EDIT THIS: it needs to match the previous scenes panic
                     WriteLetterByLetter(" Noting how the gas hadn't tasted nor smelt any different from air but you could've sworn you felt a few wisps of flame exit your mouth with the fumes.");
-                    bool isOutside = true;
+                    isOutside = true;
                 }
 
                 else if (input4 == "stay")
@@ -239,99 +239,117 @@
 
                 
 
-                if (isOutside == true)
+
+            }
+
+            if (isOutside == true)
+            {
+
+                Thread.Sleep(3000);
+                WriteLetterByLetter("You shake off the remaining shaken feelings from that cave-like room.");
+                Thread.Sleep(900);
+                WriteLetterByLetter("Taking in your surroundings, you begin to notice the grass beneath your boots.");
+                Thread.Sleep(700);
+                WriteLetterByLetter("The massive trees with low hanging branches around you,");
+                Thread.Sleep(700);
+                Console.WriteLine(" ");
+                WriteLetterByLetter("and the relieving scent of morning dew, like a foggy morning in the mountains");
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Thread.Sleep(900);
+                WriteLetterByLetter(" Strange, I don't remember being to any mountains..");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Thread.Sleep(700);
+                WriteLetterByLetter(" You frowned in confusion.");
+                Thread.Sleep(700);
+                WriteLetterByLetter(" Which only worsened as you noticed how the grass was dry,");
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(1200);
+                WriteLetterByLetter(" You shrug it off and begin to walk through the forest,");
+                Thread.Sleep(900);
+                WriteLetterByLetter(" enjoying the sun and grass.");
+
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(1300);
+                WriteLetterByLetter(" You come across a flattened ring of flora,");
+                Thread.Sleep(900);
+                WriteLetterByLetter(" smushed.");
+                Thread.Sleep(1000);
+                WriteLetterByLetter(" Upon looking up you see a gap in branches.");
+                Thread.Sleep(900);
+                WriteLetterByLetter(" Something had fallen from the sky and landed here.");
+                Thread.Sleep(1000);
+                WriteLetterByLetter(" Most of the debris is supersized to match the forest, however some of it is small enough");
+
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Thread.Sleep(700);
+                Console.WriteLine(" Pick up a stick, pinecone, rock, or nothing?");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+
+                string input5 = Console.ReadLine();
+                ItemStats item = default;
+
+                if (input5 == "nothing")
                 {
-
-                    Thread.Sleep(3000);
-                    WriteLetterByLetter("You shake off the remaining shaken feelings from that cave-like room.");
-                    Thread.Sleep(900);
-                    WriteLetterByLetter("Taking in your surroundings, you begin to notice the grass beneath your boots.");
-                    Thread.Sleep(700);
-                    WriteLetterByLetter("The massive trees with low hanging branches around you,");
-                    Thread.Sleep(700);
-                    Console.WriteLine(" ");
-                    WriteLetterByLetter("and the relieving scent of morning dew, like a foggy morning in the mountains");
-                    Console.WriteLine(); // Blank Line
-                    Console.WriteLine(); // Blank Line
-                   Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Thread.Sleep(900);
-                    WriteLetterByLetter(" Strange, I don't remember being to any mountains..");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Thread.Sleep(700);
-                    WriteLetterByLetter(" You frowned in confusion.");
-                    Thread.Sleep(700);
-                    WriteLetterByLetter(" Which only worsened as you noticed how the grass was dry,");
-                    Console.WriteLine(); // Blank Line
-                    Console.WriteLine(); // Blank Line
-                    Thread.Sleep(1200);
-                    WriteLetterByLetter(" You shrug it off and begin to walk through the forest,");
-                    Thread.Sleep(900);
-                    WriteLetterByLetter(" enjoying the sun and grass.");
-
-                    Console.WriteLine(); // Blank Line
-                    Console.WriteLine(); // Blank Line
-                    Thread.Sleep(1300);
-                    WriteLetterByLetter(" You come across a flattened ring of flora,");
-                    Thread.Sleep(900);
-                    WriteLetterByLetter(" smushed.");
-                    Thread.Sleep(1000);
-                    WriteLetterByLetter(" Upon looking up you see a gap in branches.");
-                    Thread.Sleep(900);
-                    WriteLetterByLetter(" Something had fallen from the sky and landed here.");
-                    Thread.Sleep(1000);
-                    WriteLetterByLetter(" Most of the debris is supersized to match the forest, however some of it is small enough");
-
-                    Console.WriteLine(); // Blank Line
-                    Console.WriteLine(); // Blank Line
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Thread.Sleep(700);
-                    Console.WriteLine(" Pick up a stick, pinecone, rock, or nothing?");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine(); // Blank Line
-                    Console.WriteLine(); // Blank Line
-
-                    string input5= Console.ReadLine();
-                    ItemStats item = default;
-
-                    if (input5 == "nothing") 
-                    {
-                        NormalReaction();
-                    }
-
-                    else if (input5 == "rock")
-                    {
-                        NormalReaction();
-                        item = ItemStats.rock;
-                    }
-
-                    else if (input5 == "pinecone") 
-                    {
-                        NormalReaction();
-                        item = ItemStats.pinecone;
-                    }
-
-                    else if (input5 == "stick")
-                    {
-                        NormalReaction();
-                        item = ItemStats.stick;
-                    }
-
-                    Console.WriteLine(item.itemType);
-
-
-
-
-
-
-
-
-
-
-
-
+                    NormalReaction();
                 }
+
+                else if (input5 == "rock")
+                {
+                    NormalReaction();
+                    item = ItemStats.rock;
+                }
+
+                else if (input5 == "pinecone")
+                {
+                    NormalReaction();
+                    item = ItemStats.pinecone;
+                }
+
+                else if (input5 == "stick")
+                {
+                    NormalReaction();
+                    item = ItemStats.stick;
+                }
+
+                Thread.Sleep(900);
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Black;
+                WriteLetterByLetter(" This " + item.itemType + "'ll work.");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                //Console.WriteLine(item.itemType);
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(1100);
+                WriteLetterByLetter("Suddenly a branch snaps behind you"); Thread.Sleep(800);
+                WriteLetterByLetter("."); Thread.Sleep(800);
+                WriteLetterByLetter(".");
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Console.WriteLine(); // Blank Line
+                Thread.Sleep(1000);
+                EndMessage();
+
+
+
+
+
+
+
+
+
+
 
 
             }
@@ -344,4 +362,3 @@
         }
     }
 }
-// I have RUBRIC CATEGORIES:...
