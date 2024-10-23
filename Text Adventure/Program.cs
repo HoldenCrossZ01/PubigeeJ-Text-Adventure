@@ -49,6 +49,15 @@
         static void Main(string[] args)
         {
 
+            //int[] derek = [10, 11, 12];
+
+            //string[] vgd = ["eleven", "twelve", "ten"];
+            //vgd[0] = "thirteen";
+
+            //WriteLetterByLetter(vgd[0]);
+
+
+
             //int myBirthMoment = 10162006;
             //Console.WriteLine(myBirthMoment);
             //float myFavoriteNumber = (int)myBirthMoment;
@@ -297,7 +306,7 @@
 
                 string input5 = Console.ReadLine();
                 ItemStats item = default;
-
+                // to do: Next time convert the options to an array
                 if (input5 == "nothing")
                 {
                     NormalReaction();
